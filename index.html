@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Water Meter Reading App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Water Meter Reading</h1>
+    <div id="status"></div>
+  </header>
+
+  <main>
+    <section id="map-section">
+      <div id="map"></div>
+    </section>
+    <section id="controls">
+      <form id="meter-form">
+        <label for="meter-id">Meter Number:</label>
+        <input type="text" id="meter-id" name="meter-id" required>
+
+        <label for="reading">Reading:</label>
+        <input type="number" id="reading" name="reading" required>
+
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" accept="image/*" capture="environment">
+
+        <button type="submit">Save Reading</button>
+      </form>
+      <table id="readings-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Meter ID</th>
+            <th>Reading</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Photo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
